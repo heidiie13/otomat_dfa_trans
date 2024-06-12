@@ -1,0 +1,29 @@
+Original DFA:
+Tập trạng thái: [A, B, C, D, E, F, G, H, I, X]
+Trạng thái bắt đầu: A
+Tập trạng thái kết: [C]
+Bảng chuyển trạng thái:
+    delta        0        1
+        A        B        F
+        B        G        C
+        C        A        C
+        D        I        X
+        E        H        F
+        F        C        G
+        G        I        E
+        H        G        C
+        I        D        X
+        X        I        D
+
+Minimal DFA of Original DFA:
+Tập trạng thái: [A-E, B-H, F, G, C, I-D-X]
+Trạng thái bắt đầu: A-E
+Tập trạng thái kết: [C]
+Bảng chuyển trạng thái:
+    delta        0        1
+      A-E      B-H        F
+      B-H        G        C
+        F        C        G
+        G    I-D-X      A-E
+        C      A-E        C
+    I-D-X    I-D-X    I-D-X
